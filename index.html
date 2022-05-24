@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <style>
+    .header {
+      margin-bottom: 50px;
+    }
+
+    .footer {
+      margin-left: 400px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <div class="header">
+      <h1>
+        <img src="https://game.gtimg.cn/images/lol/v3/logo-public.png" alt="">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addModal">添加</button>
+      </h1>
+    </div>
+    <!-- 添加模态框 -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="addModalLabel">添加</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="title" class="control-label">名字:</label>
+                <input type="text" class="form-control" id="title">
+              </div>
+              <div class="form-group">
+                <label for="pos" class="control-label">位置:</label>
+                <input type="text" class="form-control" id="pos">
+              </div>
+              <div class="form-group">
+                <label for="idea" class="control-label">想法:</label>
+                <textarea class="form-control" id="idea"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary save-data">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 修改的模态框 -->
+    <div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="modifyModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="modifyModalLabel">修改</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="title" class="control-label">名字:</label>
+                <input type="text" class="form-control" id="title">
+              </div>
+              <div class="form-group">
+                <label for="pos" class="control-label">位置:</label>
+                <input type="text" class="form-control" id="pos">
+              </div>
+              <div class="form-group">
+                <label for="idea" class="control-label">想法:</label>
+                <textarea class="form-control" id="idea"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary modify-data">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 确认删除的模态框 -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">确认删除框</h4>
+          </div>
+          <div class="modal-body">
+            <p>御弟哥哥,吃干抹净就想走&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">留下来</button>
+            <button type="button" class="btn btn-primary confirm-del">拜拜</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 中间部分 -->
+    <div class="content">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>名字</th>
+            <th>位置</th>
+            <th>想法</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>删除/修改</td>
+          </tr> -->
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer">
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="./bootstrap/js/bootstrap.js"></script>
+  <!-- index.js 依赖于axios.js 注意引入顺序 -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
